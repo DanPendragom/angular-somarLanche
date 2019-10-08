@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Somando no Angular!</h1>
+            <h1>Micro-serviço de Soma</h1>
         </div>
     </div>
     <div class="row">
@@ -14,13 +14,50 @@
     <div class="row">
         <div class="form-group">
             <div class="col-md-4">
-                <button class="btn-info btn btn-block" (click)="calculeComp(5)">Lanche R$5,00</button>
+                <button class="btn-info btn btn-block" (click)="calculeComp(5);quantidadeLanches()">
+                    Lanche R$5,00
+                </button>
             </div>
             <div class="col-md-4">
-                <button class="btn-info btn btn-block" (click)="calculeComp(4)">Bebida R$4,00</button>
+                <button class="btn-info btn btn-block" (click)="calculeComp(4); quantidadeBebidas()">
+                    Bebida R$4,00
+                </button>
             </div>
             <div class="col-md-4">
-                <button class="btn-info btn btn-block" (click)="calculeComp(3)">Doce R$3,00</button>
+                <button class="btn-info btn btn-block" (click)="calculeComp(3); quantidadeDoces()">
+                    Doce R$3,00
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-4">
+                <h3>Qtd. de Lanches</h3>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    readonly 
+                    [value]="getQtdLanches" 
+                />
+            </div>
+            <div class="col-md-4">
+                <h3>Qtd. de Bebidas</h3>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    readonly
+                    [value]="getQtdBebidas"
+                />
+            </div>
+            <div class="col-md-4">
+                <h3>Qtd. de Lanches</h3>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    readonly
+                    [value]="getQtdDoces"
+                />
             </div>
         </div>
     </div>
