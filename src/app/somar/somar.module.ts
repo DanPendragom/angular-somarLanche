@@ -5,9 +5,16 @@ import { SomaComponent } from './components/soma/soma.component';
 
 
 @NgModule({
-  declarations: [SomaComponent],
+  declarations: [
+    SomaComponent
+  ],
+
   imports: [
     CommonModule
+  ],
+
+  exports:[
+    SomaComponent
   ]
 })
 export class SomarModule { }
