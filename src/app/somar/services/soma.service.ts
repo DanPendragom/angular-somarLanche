@@ -5,5 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class SomaService {
 
-  constructor() { }
+
+  constructor() {}
+
+  calcule(valorAtual: number, valorNovo: number): number{
+    return valorAtual + valorNovo;
+  }
+  
 }
